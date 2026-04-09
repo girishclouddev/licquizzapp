@@ -99,11 +99,11 @@ export default function StartScreen({ onStart }) {
         <div className="grid grid-cols-2 gap-3 mb-6 text-sm">
           <div className="rounded-2xl p-3 border border-violet-200 dark:border-violet-800 bg-violet-50 dark:bg-violet-900/20">
             <div className="font-semibold text-violet-700 dark:text-violet-300 mb-1">⏱ Normal Mode</div>
-            <div className="text-gray-600 dark:text-gray-400 text-xs">15 sec / question</div>
+            <div className="text-gray-600 dark:text-gray-400 text-xs">60 sec / question</div>
           </div>
           <div className="rounded-2xl p-3 border border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-900/20">
             <div className="font-semibold text-orange-700 dark:text-orange-300 mb-1">⚡ Challenge</div>
-            <div className="text-gray-600 dark:text-gray-400 text-xs">10 sec + randomized</div>
+            <div className="text-gray-600 dark:text-gray-400 text-xs">30 sec + randomized</div>
           </div>
         </div>
 

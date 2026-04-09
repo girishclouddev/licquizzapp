@@ -4,8 +4,8 @@ import QuestionCard from './QuestionCard'
 import ProgressBar from './ProgressBar'
 import allQuestions from '../data/quiz.json'
 
-const NORMAL_TIMER = 15
-const CHALLENGE_TIMER = 10
+const NORMAL_TIMER = 60
+const CHALLENGE_TIMER = 30
 const QUESTIONS_PER_QUIZ = 20
 const BASE_POINTS = 10
 const STREAK_BONUS = 5
