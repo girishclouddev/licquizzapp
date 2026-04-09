@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply font-inter antialiased;
+    font-family: 'Inter', 'Noto Sans Gujarati', sans-serif;
+  }
+
+  .gujarati-text {
+    font-family: 'Noto Sans Gujarati', 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold rounded-2xl
+           shadow-lg shadow-violet-500/30 hover:shadow-violet-500/50 hover:scale-105
+           active:scale-95 transition-all duration-200 cursor-pointer;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700;
+  }
+
+  .option-btn {
+    @apply w-full text-left px-5 py-4 rounded-2xl border-2 font-medium transition-all duration-200
+           cursor-pointer select-none;
+  }
+
+  .option-default {
+    @apply border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700
+           text-gray-800 dark:text-gray-100 hover:border-violet-400 hover:bg-violet-50
+           dark:hover:bg-gray-600 hover:shadow-md;
+  }
+
+  .option-correct {
+    @apply border-emerald-500 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700
+           dark:text-emerald-300 shadow-md shadow-emerald-200 dark:shadow-emerald-900/30;
+  }
+
+  .option-wrong {
+    @apply border-red-500 bg-red-50 dark:bg-red-900/30 text-red-700
+           dark:text-red-300 shadow-md shadow-red-200 dark:shadow-red-900/30;
+  }
+
+  .option-selected-correct {
+    @apply border-emerald-500 bg-emerald-500 text-white shadow-lg shadow-emerald-300
+           dark:shadow-emerald-900/50 scale-100;
+  }
+
+  .option-selected-wrong {
+    @apply border-red-500 bg-red-500 text-white shadow-lg shadow-red-300
+           dark:shadow-red-900/50 scale-100;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .scale-98 {
+    transform: scale(0.98);
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-violet-600 to-indigo-500 bg-clip-text text-transparent;
+  }
+}
+
+/* Timer bar animation */
+.timer-bar {
+  transition: width linear;
+}
+
+/* Shimmer effect for skeleton loading */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% auto;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-violet-300 dark:bg-violet-600 rounded-full;
+}
+
+/* Streak fire animation */
+@keyframes flicker {
+  0%, 100% { transform: scale(1) rotate(-2deg); }
+  50% { transform: scale(1.1) rotate(2deg); }
+}
+
+.fire {
+  animation: flicker 0.5s ease-in-out infinite;
+  display: inline-block;
+}
